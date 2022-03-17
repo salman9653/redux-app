@@ -1,17 +1,17 @@
 export const depositMoney = (amount) => {
-    return (dispach) => {
-        dispach({
+    return (dispatch) => {
+        dispatch({
             type: 'deposit',
-            paylod: amount
+            payload: amount
         })
     }
 }
 
 export const withdrawMoney = (amount) => {
-    return (dispach) => {
-        dispach({
+    return (dispatch) => {
+        dispatch({
             type: 'withdraw',
-            paylod: amount
+            payload: amount
         })
     }
 }

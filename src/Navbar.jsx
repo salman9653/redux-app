@@ -1,6 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
-const navbar = () => {
+const Navbar = () => {
+    const amount = useSelector(state => state.amount);
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
@@ -18,7 +20,8 @@ const navbar = () => {
                         </li>
                     </ul>
                     <form className="d-flex">
-                        <span className="btn btn-primary">Balance : Rs.10000</span>
+                        <span className="btn btn-primary">Balance : Rs. {amount} /- </span>
+                        {console.log(amount)}
                     </form>
                 </div>
             </div>
@@ -26,4 +29,4 @@ const navbar = () => {
     )
 }
 
-export default navbar
+export default Navbar
